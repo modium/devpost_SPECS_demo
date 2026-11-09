@@ -1,0 +1,111 @@
+- !<AssetImportMetadata/8b06a762-2dc4-4a83-92db-94f2c5356c00>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 91f018d5-524d-4d4d-9316-eaecf1a8ab0e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 91f018d5-524d-4d4d-9316-eaecf1a8ab0e
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 90fbb160-fb6e-42fd-8845-442c09d69a68
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/90fbb160-fb6e-42fd-8845-442c09d69a68>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 4bc258b3-9e80-4509-8a8f-187aa51521a7
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    arcDistanceCm: false
+    arcWidthCm: false
+    batonArc: false
+    batonColor: false
+    batonCount: false
+    batonDiameterCm: false
+    batonLengthCm: false
+    batonMaterial: false
+    countdownSeconds: false
+    debugColliders: false
+    dropIntervalSeconds: false
+    fallSlowdown: false
+    floor: false
+    grabPaddingCm: false
+    highlightColor: false
+    panel: false
+    placeAtStart: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panel: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      batonArc: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      floor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      batonMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      placeAtStart: true
+      batonCount: !<float> 10.000000
+      fallSlowdown: 1.500000
+      dropIntervalSeconds: !<float> 2.000000
+      countdownSeconds: !<float> 3.000000
+      arcWidthCm: !<float> 60.000000
+      arcDistanceCm: !<float> 100.000000
+      batonLengthCm: !<float> 35.000000
+      batonDiameterCm: !<float> 3.000000
+      grabPaddingCm: 1.250000
+      batonColor: !<Vec4> {x: 1.000000, y: 0.620000, z: 0.200000, w: 1.000000}
+      highlightColor: !<Vec4> {x: 1.000000, y: 0.950000, z: 0.600000, w: 1.000000}
+      debugColliders: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">BatonCatchMain – round flow, batons, score</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">References</span>"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input AssignableType_1 panel {"hint":"The center-bottom game panel (Start / countdown / score / Retry / Reset)"}'
+    - "// @input SceneObject batonArc {\"hint\":\"Arc center (the player's spot). Move/raise it to move the whole arc; its Y is the batons' bottom height\"}"
+    - "// @input SceneObject floor {\"hint\":\"Virtual floor stand-in. A baton whose bottom crosses this object's world Y counts as dropped\"}"
+    - '// @input Asset.Material batonMaterial {"hint":"Material cloned onto every baton (color is set per baton)"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Game</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Game"}'
+    - "// @input bool placeAtStart = true {\"hint\":\"On launch, move this whole experience (arc, panel, floor) to the user's start position and facing, so it appears in front of them and then stays fixed in the world\"}"
+    - '// @input float batonCount = 10 {"hint":"Number of batons in the arc", "widget":"slider", "min":1, "max":20, "step":1}'
+    - '// @input float fallSlowdown = 3 {"hint":"Fall speed: gravity is divided by this. 1 = real gravity, 3 = default, higher = slower/easier", "widget":"slider", "min":1, "max":10, "step":0.1}'
+    - '// @input float dropIntervalSeconds = 2 {"hint":"Seconds between baton drops", "widget":"slider", "min":0.5, "max":5, "step":0.1}'
+    - '// @input float countdownSeconds = 3 {"hint":"Countdown length in seconds (shows 3, 2, 1 …)", "widget":"slider", "min":1, "max":5, "step":1}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Arc & Baton</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Arc & Baton"}'
+    - '// @input float arcWidthCm = 52 {"hint":"Arc width (chord) in cm. 52 keeps the end batons inside the SPECS view (~32° wide) at 100 cm", "widget":"slider", "min":20, "max":120, "step":1}'
+    - '// @input float arcDistanceCm = 100 {"hint":"Distance from the player to the arc in cm", "widget":"slider", "min":50, "max":200, "step":1}'
+    - '// @input float batonLengthCm = 30 {"hint":"Baton length in cm", "widget":"slider", "min":20, "max":50, "step":0.5}'
+    - '// @input float batonDiameterCm = 3 {"hint":"Baton thickness in cm", "widget":"slider", "min":1, "max":6, "step":0.1}'
+    - '// @input float grabPaddingCm = 1 {"hint":"Extra grab area around each baton, per side, in cm", "widget":"slider", "min":0, "max":3, "step":0.1}'
+    - '// @input vec4 batonColor = "{1, 0.62, 0.2, 1}" {"hint":"Baton color (light/bright — black is invisible on Specs)", "widget":"color"}'
+    - '// @input vec4 highlightColor = "{1, 0.95, 0.6, 1}" {"hint":"Baton color while aimed at", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Debug</span>"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - "// @input bool debugColliders {\"hint\":\"Draw every baton's grab collider\"}"
+    - '// @ui {"widget":"group_end"}'

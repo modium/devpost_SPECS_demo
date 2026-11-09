@@ -1,0 +1,62 @@
+- !<AssetImportMetadata/5a6808a3-cfd7-42da-96e6-3d93c9e3b900>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 37b0d116-3eed-43a4-b5f9-412384ce08d3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 37b0d116-3eed-43a4-b5f9-412384ce08d3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 407f638b-a1ab-4f47-8f57-673e8a0e6b11
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/407f638b-a1ab-4f47-8f57-673e8a0e6b11>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: f1d99e30-541f-4037-8184-f645d943cd07
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    captionColor: false
+    idleCaption: false
+    idleValue: false
+    panelWidth: false
+    valueColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelWidth: !<float> 20.000000
+      idleCaption: Reaction Baton Catch
+      idleValue: "Ready?"
+      captionColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 0.800000}
+      valueColor: !<Vec4> {x: 0.700000, y: 0.950000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">BatonCatchPanelUI – center-bottom game panel</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelWidth = 20 {"hint":"Panel width in cm", "widget":"slider", "min":14, "max":40, "step":0.5}'
+    - '// @input string idleCaption = "Reaction Baton Catch" {"hint":"Caption shown before the round starts"}'
+    - '// @input string idleValue = "Ready?" {"hint":"Big line shown before the round starts"}'
+    - '// @input vec4 captionColor = "{1, 1, 1, 0.8}" {"hint":"Caption text color (keep it light — the display is additive)", "widget":"color"}'
+    - '// @input vec4 valueColor = "{0.7, 0.95, 1, 1}" {"hint":"Big value text color (countdown / score)", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'
